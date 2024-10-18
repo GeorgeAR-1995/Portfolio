@@ -5,76 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>George's Portfolio</title>
-    <link href="resources/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class = "nav">
-        <h1>George Ramsey</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">George Ramsey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-    <div id = "about">
-        <h2   class = "about">About Me</h2>
-            <div class = "about-body">
-                <p>I am looking to make a career transition to become a software developer. 
-                I have experience as a data analyst at a FinTech, mainly using SQL 
-                and Python for scripting. I am 28 years old and live in Edinburgh. I enjoy sports, 
-                mainly tennis and golf, but will try anything. I also try to travel as much as possible 
-                with my partner and when we aren't abroad we are often enjoying the Scottish countryside with our dog.</p>
-                <img class = "selfpicture" src = "resources/images/images.jpeg" alt = "picture of George Ramsey">
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <img src="resources/images/images.jpeg" alt="George Ramsey" class="img-fluid rounded-circle mb-4" width="200">
+                </div>
+                <div class="col-lg-8">
+                    <h2>About Me</h2>
+                    <p>I am looking to make a career transition to become a software developer. I have experience as a data analyst at a FinTech, mainly using SQL and Python for scripting. I am 28 years old and live in Edinburgh. I enjoy sports, mainly tennis and golf, but will try anything. I also try to travel as much as possible with my partner and when we aren't abroad, we often enjoy the Scottish countryside with our dog.</p>
+                </div>
             </div>
-    </div>
-    <div  id = "projects" class = "projects">
-        <h2>Projects</h2>
-            <p>These are some of the projects I created as part of the Full Stack Engineer course I completed: </p>
-            <details>
-                <summary <a href = "https://github.com/GeorgeAR-1995/Workout_Generator">Workout Generator</a></summary>
-                <p>
-                    A workout generator app. This was a JavaScript project where the aim was to create
-                    a randomized output for the user. The output I chose was a workout planner which would 
-                    select a body part to workout, 3 exercises and what sets and reps to perform.
-                    <br>
-                    Things that could be added but were out of scope: 
-                    <br>- A nice front end design
-                    <br>- More structure/personalisation in terms of longer term plans and limiting body parts to 2x per week
+        </div>
+    </section>
 
-                </p>
-            </details>
-            <details>
-                <summary <a href = "https://github.com/GeorgeAR-1995/TeaCozy">Tea Cozy</a></summary>
-                <p>
-                    Tea Cozy App
-                </p>
-            </details>
-    </div>
-    <div id = "skills" class = "skills">
-        <h2>Skills</h2>
-            <p>These are the skills learnt as part of the Full Stack course:</p>
-                <ul>
-                    <li>SQL</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>GitHub</li>
-                    <li>ExpressJS</li>
-                </ul>
-    </div>
-    <div id = "contact" class = "contact">
-        <h2>Contact Me</h2>
-            <p>GitHub: https://github.com/GeorgeAR-1995</p>
-            <p>LinkedIn: https://www.linkedin.com/in/george-ramsey-b91a47143/</p>
-            <p>Email: georgeramsey@live.com</p>
-            <p>Mobile: 07549215498</p>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="accordion" id="projectsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project1" aria-expanded="true">
+                            Workout Generator
+                        </button>
+                    </h2>
+                    <div id="project1" class="accordion-collapse collapse show" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <a href="https://github.com/GeorgeAR-1995/Workout_Generator">Workout Generator</a>
+                            <p>A workout generator app using JavaScript to create randomized workout plans.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project2" aria-expanded="false">
+                            Tea Cozy
+                        </button>
+                    </h2>
+                    <div id="project2" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <a href="https://github.com/GeorgeAR-1995/TeaCozy">Tea Cozy</a>
+                            <p>A landing page for a fictional tea shop built with HTML and CSS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">SQL</li>
+                        <li class="list-group-item">HTML</li>
+                        <li class="list-group-item">CSS</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">JavaScript</li>
+                        <li class="list-group-item">React</li>
+                        <li class="list-group-item">ExpressJS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
+            <p><a href="https://github.com/GeorgeAR-1995" target="_blank">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/george-ramsey-b91a47143/" target="_blank">LinkedIn</a></p>
+            <p>Email: <a href="mailto:georgeramsey@live.com">georgeramsey@live.com</a></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

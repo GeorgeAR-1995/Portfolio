@@ -1,80 +1,42 @@
-.nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px skyblue solid;
+/* Animated slate grey background */
+body {
+    background: linear-gradient(135deg, #2f4f4f, #4b6977, #708090); /* Slate grey gradient */
+    background-size: 200% 200%;
+    animation: gradientAnimation 8s ease infinite; /* Subtle animation */
+    color: white; /* Text is white to contrast with dark background */
 }
 
-.nav a {
-    color: black;
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Sections styles */
+section {
+    background-color: transparent; /* No specific background, will show slate grey */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 20px;
+    margin: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Adjust text and header styles for better visibility */
+h2, p, li {
+    color: white; /* Keep the text white to ensure readability */
+}
+
+/* Navbar links should remain readable */
+.navbar-brand, .nav a {
+    color: white; /* White links for readability */
 }
 
 .nav a:hover {
-    text-decoration: none; /* Remove underline on hover */
+    color: #00bfff; /* Sky blue hover effect */
 }
-
-.nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    color: inherit;
-}
-
-.nav li {
-    margin-right: 10px;
-}
-
-.nav h1 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-h2 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-p {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    text-align: left;
-}
-
-.selfpicture {
-    width: auto;
-    height: 150px;
-    margin-right: 10px;
-    margin-left: 30px;
-}
-
-.about-body {
-    display: flex;
-    text-align: justify;
-    border-bottom: 2px skyblue solid;
-    padding-bottom: 15px;
-}
-
-.projects {
-    border-bottom: 2px skyblue solid;
-    padding-bottom: 15px;
-}
-
-.skills {
-    border-bottom: 2px skyblue solid;
-    padding-bottom: 15px;
-}
-
-h4 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-details {
-    margin-left: 20px;
-}
-
-
