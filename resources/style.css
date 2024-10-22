@@ -1,22 +1,4 @@
-/* Animated slate grey background */
-body {
-    background: linear-gradient(135deg, #2f4f4f, #4b6977, #708090); /* Slate grey gradient */
-    background-size: 200% 200%;
-    animation: gradientAnimation 8s ease infinite; /* Subtle animation */
-    color: white; /* Text is white to contrast with dark background */
-}
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 /* Sections styles */
 section {
@@ -29,14 +11,59 @@ section {
 
 /* Adjust text and header styles for better visibility */
 h2, p, li {
-    color: white; /* Keep the text white to ensure readability */
+    color: grey; /* Keep the text white to ensure readability */
 }
 
 /* Navbar links should remain readable */
 .navbar-brand, .nav a {
-    color: white; /* White links for readability */
+    color: grey; /* White links for readability */
 }
 
-.nav a:hover {
-    color: #00bfff; /* Sky blue hover effect */
+/* Center all text inside the projects section */
+#projects {
+    text-align: center;
+}
+
+#projects .accordion-button {
+    justify-content: center; /* Centers the text within accordion buttons */
+}
+
+#projects .accordion-body {
+    text-align: center; /* Centers the text within each accordion body */
+}
+
+/* Ensure images and arrows are centered */
+.screenshots img {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: 0 auto;
+}
+
+.css-arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid grey; /* Arrow color */
+    margin: 20px auto;
+}
+
+#jammming-summary-paragraph {
+    padding-top: 15px;
+}
+
+.tech-stack {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Space below the tech stack section */
+}
+
+.tech-stack div {
+    margin-bottom: 10px; /* Space between each tech stack entry */
+    color: grey; /* Adjust text color for visibility */
+    line-height: 1.5; /* Line height for readability */
+}
+
+h5 {
+    color: grey;
 }
